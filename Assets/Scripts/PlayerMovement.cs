@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         isWalking = !(Mathf.Approximately(horizontal, 0f) && Mathf.Approximately(vertical, 0f));
         animator.SetBool("IsWalking", isWalking);
 
-        //Assign ratation towards move direction
+        //Assign rotation towards move direction
         Vector3 desiredDirection = Vector3.RotateTowards(transform.forward, moveDirection, turnSpeed * Time.deltaTime, 0f);
         rotation = Quaternion.LookRotation(desiredDirection);
 
