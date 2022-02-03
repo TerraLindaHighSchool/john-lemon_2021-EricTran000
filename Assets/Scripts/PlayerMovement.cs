@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     private Quaternion rotation;
     private bool isWalking;
+    AudioSource m_AudioSource;
 
     [SerializeField] private float turnSpeed = 20f;
 
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        m_AudioSource = GetComponent<AudioSource>();
         rotation = Quaternion.identity;
     }
 
@@ -34,6 +36,18 @@ public class PlayerMovement : MonoBehaviour
         //Set animator to walking or idle depending on user input
         isWalking = !(Mathf.Approximately(horizontal, 0f) && Mathf.Approximately(vertical, 0f));
         animator.SetBool("IsWalking", isWalking);
+
+        if(isWalking)
+        {
+           if(!m_AudioSource.isPlaying)
+            {
+                m_AudioSource.Play();
+            }
+        }
+        else
+        {
+            m_AudioSource.Stop();
+        }
 
         //Assign rotation towards move direction
         Vector3 desiredDirection = Vector3.RotateTowards(transform.forward, moveDirection, turnSpeed * Time.deltaTime, 0f);

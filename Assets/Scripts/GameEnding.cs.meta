@@ -3,7 +3,12 @@ guid: ef7ae0d237e8015448314f2521710798
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {instanceID: 0}
+  - exitBackgroundImageCanvasGroup: {instanceID: 0}
+  - exitAudio: {instanceID: 0}
+  - caughtBackgroundImageCanvasGroup: {instanceID: 0}
+  - caughtAudio: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
