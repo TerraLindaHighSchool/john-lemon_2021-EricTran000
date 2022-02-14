@@ -3456,6 +3456,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce91324a88e4cf47933e3f003b3fc2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &355728576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 902810957002526060, guid: e1cf532e293ac79429c5ac001a043e1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1141472690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &355728583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355728576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14193e495fe5bd0468ebeebcdcf6fa2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRange: 0
+  player: {fileID: 350206697}
+--- !u!135 &355728584
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355728576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &431503917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4761,6 +4794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 902810957005701226, guid: e1cf532e293ac79429c5ac001a043e1c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9999d96671226e642b9f9bc8173c375c, type: 2}
     - target: {fileID: 1645801490246773059, guid: e1cf532e293ac79429c5ac001a043e1c,
         type: 3}
       propertyPath: player
