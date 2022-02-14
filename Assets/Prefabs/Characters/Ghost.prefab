@@ -960,7 +960,7 @@ PrefabInstance:
     - target: {fileID: 3054288508026288214, guid: 9ca9552bf0754b34fa69fecf62e5ea94,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 3054288508026288214, guid: 9ca9552bf0754b34fa69fecf62e5ea94,
         type: 3}
@@ -1001,6 +1001,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PointOfView
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675061046748719809, guid: 9ca9552bf0754b34fa69fecf62e5ea94,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675061046748719809, guid: 9ca9552bf0754b34fa69fecf62e5ea94,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675061046748719809, guid: 9ca9552bf0754b34fa69fecf62e5ea94,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ca9552bf0754b34fa69fecf62e5ea94, type: 3}
