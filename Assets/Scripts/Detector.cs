@@ -4,42 +4,47 @@ using UnityEngine;
 
 public class Detector : MonoBehaviour
 {
-    public bool isInRange;
+    public bool detected;
     
     public GameObject player;
-    private SphereCollider range;
+    [SerializeField] SphereCollider range;
 
-    
+
     void pursuit()
     {
         range = GetComponent<SphereCollider>();
 
     }
 
-    
 
-    
+
+
     void Update()
     {
-        if(isInRange)
+        range = GetComponent<SphereCollider>();
+        if (detected)
         {
+            
             transform.LookAt(player.transform);
             transform.position += transform.forward * 0.75f * Time.deltaTime;
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
 
         if(other.gameObject == player)
         {
-            isInRange = true;
+            detected = true;
         }
         
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isInRange = false;
+        if (other.gameObject == player)
+        {
+            detected = false;
+        }
     }
 }

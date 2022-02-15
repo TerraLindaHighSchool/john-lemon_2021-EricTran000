@@ -24,7 +24,6 @@ public class Restarter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nextLevel();
-        print("g");
+        // add nextLevel(); here later
     }
 }
