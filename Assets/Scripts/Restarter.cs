@@ -16,14 +16,10 @@ public class Restarter : MonoBehaviour
             restart = true;
         }
     }
-
+    //brings the level to the next level
     private void nextLevel()
     {
         SceneManager.LoadScene("second level");
     }
-    // Update is called once per frame
-    void Update()
-    {
-        // add nextLevel(); here later
-    }
+
 }
